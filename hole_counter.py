@@ -14,12 +14,10 @@ def count_holes(input_string):
              "5": 0, "6": 1, "7": 0, "8": 2, "9": 1}
     holes_sum = 0
 
-    if input_string.startswith("0"):
-        temp_string = input_string[1:]
-        input_string = temp_string
+    formatted_string = str(int(input_string))
 
-    for i in range(len(input_string)):
-        holes_sum += holes[input_string[i]]
+    for i in range(len(formatted_string)):
+        holes_sum += holes[formatted_string[i]]
 
     return holes_sum
 
